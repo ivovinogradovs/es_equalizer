@@ -125,4 +125,6 @@ def update_from_timber(timber_value, reset_clicks, regime, total_area, managed_a
     result = np.clip(result, -5, 5)
     return result.tolist()
 
-app.run(port=8052, debug=False)
+import os
+port = int(os.environ.get("PORT", 8050))
+app.run(host="0.0.0.0", port=port)
