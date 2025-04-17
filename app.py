@@ -1,4 +1,3 @@
-i still cannot get out
 from dash import Dash, dcc, html, Input, Output, State
 import numpy as np
 import dash
