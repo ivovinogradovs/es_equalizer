@@ -86,7 +86,7 @@ app.layout = html.Div([
                 marks={j: str(j) for j in range((0 if i == 0 else -5), 6)},
                 tooltip={"always_visible": False},
                 included=False,
-                className=f"es_slider-{i}",
+                className=f"es-slider-{i}",
                 disabled=(i != 0)
             )
         ], style={"display": "flex", "flexDirection": "column", "alignItems": "center", "justifyContent": "flex-start", "width": "100px", "margin": "0 20px"})
