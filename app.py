@@ -32,7 +32,7 @@ regime_weights = {
 
 GAMMA = 0.6
 
-app = Dash(__name__)
+app = Dash(__name__, external_stylesheets=["/assets/styles.css"])
 
 app.layout = html.Div([
     html.H3("Ecosystem Service Equalizer", style={"textAlign": "center"}),
