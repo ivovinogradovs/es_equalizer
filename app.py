@@ -38,9 +38,9 @@ app.layout = html.Div([
     html.H3("Ekosistēmu pakalpojumu ekvalaizers", style={"textAlign": "center"}),
 
     html.Div([
-        html.Label("Assessment area (ha):"),
+        html.Label("Novērtējamā teritorija (ha):"),
         dcc.Input(id="input-total-area", type="number", value=100, min=1, step=1),
-        html.Label("Managed area (ha):", style={"marginLeft": "20px"}),
+        html.Label("Cirsmas platība (ha):", style={"marginLeft": "20px"}),
         dcc.Input(id="input-managed-area", type="number", value=100, min=0, step=1)
     ], style={"display": "flex", "justifyContent": "center", "gap": "10px", "marginBottom": "20px"}),
 
@@ -48,7 +48,7 @@ app.layout = html.Div([
         dcc.RadioItems(
             id="regime-selector",
             options=[{"label": k, "value": k} for k in matrices.keys()],
-            value="Clearcut",
+            value="Kailcirte",
             inline=True,
             style={"display": "flex", "justifyContent": "center", "gap": "30px", "fontSize": "18px"}
         )
