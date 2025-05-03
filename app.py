@@ -3,11 +3,11 @@ import numpy as np
 import dash
 
 services = [
-    ("Timber", "#8B4513"),
-    ("Climate Control", "#8A2BE2"),
-    ("Habitat Maintenance", "#228B22"),
-    ("Water Control", "#1E90FF"),
-    ("Recreation", "#FFA500")
+    ("Koksne", "#8B4513"),
+    ("Klimata kontrole", "#8A2BE2"),
+    ("Dzīvotņu uzturēšana", "#228B22"),
+    ("Ūdens plūsmu kontrole", "#1E90FF"),
+    ("Rekreācija", "#FFA500")
 ]
 
 clearcut_matrix = np.array([
@@ -19,15 +19,15 @@ clearcut_matrix = np.array([
 ])
 
 matrices = {
-    "Clearcut": clearcut_matrix,
-    "Small Opening": clearcut_matrix * 0.65,
-    "Selective Cut": clearcut_matrix * 0.50
+    "Kailcirte": clearcut_matrix,
+    "Atvērumi": clearcut_matrix * 0.65,
+    "Izlases cirte": clearcut_matrix * 0.50
 }
 
 regime_weights = {
-    "Clearcut": 1.0,
-    "Small Opening": 0.6,
-    "Selective Cut": 0.45
+    "Kailcirte": 1.0,
+    "Atvērumi": 0.6,
+    "Izlases cirte": 0.45
 }
 
 GAMMA = 0.6
@@ -35,7 +35,7 @@ GAMMA = 0.6
 app = Dash(__name__, external_stylesheets=["/assets/styles.css"])
 
 app.layout = html.Div([
-    html.H3("Ecosystem Service Equalizer", style={"textAlign": "center"}),
+    html.H3("Ekosistēmu pakalpojumu ekvalaizers", style={"textAlign": "center"}),
 
     html.Div([
         html.Label("Assessment area (ha):"),
@@ -55,7 +55,7 @@ app.layout = html.Div([
     ], style={"display": "flex", "justifyContent": "center", "marginBottom": "20px"}),
 
     html.Div([
-        html.Div("Ecosystem Integrity", style={"textAlign": "center", "fontWeight": "bold", "marginBottom": "5px", "fontSize": "16px"}),
+        html.Div("Ekosistēmas integritāte", style={"textAlign": "center", "fontWeight": "bold", "marginBottom": "5px", "fontSize": "16px"}),
         dcc.Slider(
             id="ecosystem-integrity",
             min=-5,
@@ -67,8 +67,8 @@ app.layout = html.Div([
             included=False
         ),
         html.Div([
-            html.Span("Fragile", style={"color": "black", "marginRight": "auto"}),
-            html.Span("Resilient", style={"color": "black", "marginLeft": "auto"})
+            html.Span("Trausla", style={"color": "black", "marginRight": "auto"}),
+            html.Span("Noturīga", style={"color": "black", "marginLeft": "auto"})
         ], style={"display": "flex", "justifyContent": "space-between", "width": "100%", "marginTop": "4px"})
     ], style={"width": "60%", "margin": "0 auto 30px auto"}),
 
