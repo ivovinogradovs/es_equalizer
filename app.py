@@ -40,7 +40,7 @@ app.layout = html.Div([
     html.Div([
         html.Label("Novērtējamā teritorija (ha):"),
         dcc.Input(id="input-total-area", type="number", value=100, min=1, step=1),
-        html.Label("Cirsmas platība (ha):", style={"marginLeft": "20px"}),
+        html.Label("Izstrādes teritorija (ha):", style={"marginLeft": "20px"}),
         dcc.Input(id="input-managed-area", type="number", value=100, min=0, step=1)
     ], style={"display": "flex", "justifyContent": "center", "gap": "10px", "marginBottom": "20px"}),
 
