@@ -32,17 +32,19 @@ regime_weights = {
 
 GAMMA = 0.6
 
-app = Dash(__name__, external_stylesheets=["/assets/styles.css"])
+app = Dash(__name__)
 
 app.layout = html.Div([
     html.H3("Ekosistēmu pakalpojumu ekvalaizers", style={"textAlign": "center"}),
 
     html.Div([
-        html.Label("Novērtējamā teritorija (ha):"),
-        dcc.Input(id="input-total-area", type="number", value=100, min=1, step=1),
-        html.Label("Izstrādes teritorija (ha):", style={"marginLeft": "20px"}),
-        dcc.Input(id="input-managed-area", type="number", value=100, min=0, step=1)
-    ], style={"display": "flex", "justifyContent": "center", "gap": "10px", "marginBottom": "20px"}),
+        html.Div([
+            html.Label("Novērtējamā teritorija (ha):"),
+            dcc.Input(id="input-total-area", type="number", value=100, min=1, step=1, style={"width": "70px"}),
+            html.Label("Izstrādes teritorija (ha):", style={"marginLeft": "20px"}),
+            dcc.Input(id="input-managed-area", type="number", value=100, min=0, step=1, style={"width": "70px"})
+        ], style={"display": "inline-flex", "alignItems": "center", "gap": "10px"})
+    ], style={"display": "flex", "justifyContent": "center", "marginBottom": "20px"}),
 
     html.Div([
         dcc.RadioItems(
@@ -67,10 +69,10 @@ app.layout = html.Div([
             included=False
         ),
         html.Div([
-            html.Span("Trausla", style={"color": "black", "marginRight": "auto"}),
-            html.Span("Noturīga", style={"color": "black", "marginLeft": "auto"})
+            html.Span("Degradēta / trausla", style={"color": "#c0392b", "marginRight": "auto", "fontSize": "13px"}),
+            html.Span("Veselīga / noturīga", style={"color": "#27ae60", "marginLeft": "auto", "fontSize": "13px"})
         ], style={"display": "flex", "justifyContent": "space-between", "width": "100%", "marginTop": "4px"})
-    ], style={"width": "60%", "margin": "0 auto 30px auto"}),
+    ], style={"width": "30%", "margin": "0 auto 30px auto"}),
 
     html.Div([
         html.Div([

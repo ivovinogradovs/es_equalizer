@@ -1,7 +1,34 @@
-.es-slider-0 .rc-slider-handle { background-color: #8B4513 !important; }  /* Timber */
-.es-slider-1 .rc-slider-handle { background-color: #8A2BE2 !important; }  /* Climate Control */
-.es-slider-2 .rc-slider-handle { background-color: #228B22 !important; }  /* Habitat Maintenance */
-.es-slider-3 .rc-slider-handle { background-color: #1E90FF !important; }  /* Water Control */
-.es-slider-4 .rc-slider-handle { background-color: #FFA500 !important; }  /* Recreation */
+/* Integrity slider: red-to-green gradient track */
+#ecosystem-integrity .rc-slider-rail {
+    background: linear-gradient(to right, #c0392b 0%, #e67e22 35%, #f1c40f 50%, #2ecc71 75%, #27ae60 100%) !important;
+    height: 8px !important;
+    border-radius: 4px;
+}
+#ecosystem-integrity .rc-slider-handle {
+    border-color: #555 !important;
+    background-color: white !important;
+    width: 18px !important;
+    height: 18px !important;
+    margin-top: -5px !important;
+}
 
-Add CSS for colored slider knobs
+/* Colored knobs for each ecosystem service slider */
+.es-slider-0 .rc-slider-handle,
+.es-slider-0 .rc-slider-handle:hover,
+.es-slider-0 .rc-slider-handle-dragging { background-color: #8B4513 !important; border-color: #8B4513 !important; }
+
+.es-slider-1 .rc-slider-handle,
+.es-slider-1 .rc-slider-handle:hover,
+.es-slider-1 .rc-slider-handle-dragging { background-color: #8A2BE2 !important; border-color: #8A2BE2 !important; }
+
+.es-slider-2 .rc-slider-handle,
+.es-slider-2 .rc-slider-handle:hover,
+.es-slider-2 .rc-slider-handle-dragging { background-color: #228B22 !important; border-color: #228B22 !important; }
+
+.es-slider-3 .rc-slider-handle,
+.es-slider-3 .rc-slider-handle:hover,
+.es-slider-3 .rc-slider-handle-dragging { background-color: #1E90FF !important; border-color: #1E90FF !important; }
+
+.es-slider-4 .rc-slider-handle,
+.es-slider-4 .rc-slider-handle:hover,
+.es-slider-4 .rc-slider-handle-dragging { background-color: #FFA500 !important; border-color: #FFA500 !important; }
